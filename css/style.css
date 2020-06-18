@@ -15,9 +15,8 @@ body {
   background-color: #f4f4f4;
 }
 
-a:hover {
-  color: #ca2620;
-  text-decoration: underline;
+a {
+  text-decoration: none;
 }
 
 a:visited {
@@ -59,11 +58,6 @@ a:visited {
 
 .button-contact:visited {
   color: #4c4c4c;
-}
-
-.button-contact:hover, .button-contact:active {
-  color: #fff;
-  background-color: #4c4c4c;
 }
 
 header .profile {
@@ -286,5 +280,20 @@ footer {
   background-color: #C1681B;
   padding: 10px 0;
   color: #FFF;
+}
+
+@media (min-width: 768px) {
+  /********Base********/
+  a:hover {
+    color: #ca2620;
+  }
+  /********Header********/
+  .button-contact:hover, .button-contact:active {
+    background-color: #4c4c4c;
+    color: #fff;
+  }
+  /********Base********/
+  /********Base********/
+  /********Base********/
 }
 /*# sourceMappingURL=style.css.map */

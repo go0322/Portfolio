@@ -17,10 +17,7 @@ body {
 }
 
 a {
-  &:hover {
-    color: darken($keyColor, 10%);
-    text-decoration: underline;
-  }
+  text-decoration: none;
   &:visited{
     color: lighten($keyColor, 5%);
   }
@@ -61,10 +58,6 @@ a {
   border-radius: 4px;
   &:visited {
     color: $fontColor;
-  }
-  &:hover, &:active {
-    color: #fff;
-    background-color: $fontColor;
   }
 }
 
@@ -113,6 +106,7 @@ section {
   .container {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
   }
   h2 {
     margin-bottom: 60px;
@@ -121,7 +115,7 @@ section {
   .skill-box {
     box-sizing: border-box;
     flex: 1;
-    margin: 0 10px;
+    margin: 10px 0;
     width: 32%;
     padding: 20px;
     border-radius: 4px; 
@@ -159,7 +153,7 @@ section {
   }
   .works-box {
     float: left;
-    width: (100% / 3);
+    width: 100%;
     height: 100%;
     a {
       position: relative;
@@ -168,7 +162,6 @@ section {
         position: absolute;
         top: 0;
         left: 0;
-        display: none;
         height: 100%;
         color: #fff;
         background-color: rgba(0, 0, 0, .7);
@@ -205,15 +198,6 @@ section {
           @extend .abel;
           @extend .uppercase;
           background-color: $keyColor;
-          &:hover {
-            background-color: darken($keyColor, 10%);
-          }
-        }
-      }
-      &:hover {
-        .works-box-inner {
-          display: block;
-          width: 100%;
         }
       }
     }
@@ -258,9 +242,6 @@ section {
     color: #fff;
     border-radius: 50%;
     background-color: $keyColor;
-    &:hover {
-      background-color: darken($keyColor, 10%);
-    }
   }
 }
 
@@ -271,3 +252,68 @@ section {
   @extend .text-center;
   color: #FFF;
   }
+
+
+//PC
+@media #{$large}{
+  /********Base********/
+  a{
+    &:hover {
+      color: darken($keyColor, 10%);   
+    }
+  }
+
+  /********Header********/
+  .button-contact{
+    &:hover, &:active{
+      background-color: $fontColor;
+      color: #fff;
+    }
+  }
+
+  /********Skills********/
+  #skills{
+    .container{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .skill-box{
+      margin: 0 10px;
+    }
+  }
+  /********Works********/
+  #works{
+    .works-box{
+      width: (100% / 3);  
+      a{
+        .works-box-inner{
+          display: none;
+          width: 0%;
+          .button-readmore{
+            &:hover{
+              background-color: darken($keycolor, 10%);
+            }
+          }
+        }
+        &:hover{
+          .works-box-inner{
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  
+  
+  /********Contact********/
+  #contact{
+    ul{
+      a{
+        &:hover{
+          background-color: darken($keyColor, 10%);
+        }
+      }
+    }
+  }
+}
