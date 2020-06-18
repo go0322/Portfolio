@@ -116,7 +116,6 @@ section {
     box-sizing: border-box;
     flex: 1;
     margin: 10px 0;
-    width: 32%;
     padding: 20px;
     border-radius: 4px; 
     background-color: #fdfcf6;
@@ -291,7 +290,7 @@ section {
           width: 0%;
           .button-readmore{
             &:hover{
-              background-color: darken($keycolor, 10%);
+              background-color: darken($keyColor, 10%);
             }
           }
         }
