@@ -1,0 +1,273 @@
+@import url(https://fonts.googleapis.com/css?family=Abel);
+@import "variables";
+
+/******base******/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $baseFontFamily;
+  letter-spacing: .1em;
+  line-height: 1.6;
+  font-size: 1.4rem;
+  color: $fontColor;
+  background-color: $baseColor;
+}
+
+a {
+  &:hover {
+    color: darken($keyColor, 10%);
+    text-decoration: underline;
+  }
+  &:visited{
+    color: lighten($keyColor, 5%);
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.block-center{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/*********headerコンテンツ**********/
+
+.button-contact {
+  font-size: 20px;
+  line-height: 0;
+  display: block;
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin: 20px 20px 0 0;
+  padding: 10px;
+  @extend .text-center; 
+  color: $fontColor;
+  border: 2px solid $fontColor;
+  border-radius: 4px;
+  &:visited {
+    color: $fontColor;
+  }
+  &:hover, &:active {
+    color: #fff;
+    background-color: $fontColor;
+  }
+}
+
+header {
+  .profile {
+    clear: both;
+    width: 60%;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+  .site-title {
+    font-size: 1.8rem;
+    line-height: normal;
+    span {
+      font-size: 4.2rem;
+      display: block;
+      color: $keyColor;
+    }
+  }
+  .profile-icon {
+    margin: 30px auto;
+    border-radius: 50%;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+}
+
+/*********mainコンテンツ skills**********/
+
+section {
+  padding: 60px 0;
+  .container {
+    width: 90%;
+    @extend .block-center;
+  }
+  h2 {
+    font-size: 3.2rem;
+    @extend .abel; 
+    @extend .uppercase;
+  }
+}
+
+#skills {
+  background-color: $subColor;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  h2 {
+    margin-bottom: 60px;
+    color: $baseColor;
+  }
+  .skill-box {
+    box-sizing: border-box;
+    flex: 1;
+    margin: 0 10px;
+    width: 32%;
+    padding: 20px;
+    border-radius: 4px; 
+    background-color: #fdfcf6;
+  }
+  i {
+    font-size: 4.5rem;
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    @extend .text-center;
+    color: #fff;
+    border-radius: 50%;
+    background-color: $keyColor;
+    @extend .block-center;
+  }
+  h3 {
+    @extend .abel;
+    @extend .uppercase;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: $keyColor;
+  }
+}
+
+/*********mainコンテンツ works**********/
+
+#works {
+  padding-bottom: 0;
+  h2 {
+    margin-bottom: 50px;
+  }
+  .works-box {
+    float: left;
+    width: (100% / 3);
+    height: 100%;
+    a {
+      position: relative;
+      display: block;
+      .works-box-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        height: 100%;
+        color: #fff;
+        background-color: rgba(0, 0, 0, .7);
+        div {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          height: 40%;
+          margin: auto;
+          padding: 10px 20px;
+        }
+        h3 {
+          font-size: 1.6rem;
+          font-weight: bold;
+          margin: 0 0 5px;
+        }
+        small {
+          font-size: 1rem;
+          display: block;
+          margin-bottom: 15px;
+        }
+        .button-readmore {
+          font-size: 1rem;
+          font-weight: bold;
+          display: block;
+          width: 180px;
+          margin: auto;
+          padding: 5px 0;
+          @extend .text-center;
+          color: #fff;
+          border-radius: 4px;
+          @extend .abel;
+          @extend .uppercase;
+          background-color: $keyColor;
+          &:hover {
+            background-color: darken($keyColor, 10%);
+          }
+        }
+      }
+      &:hover {
+        .works-box-inner {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+  &:after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+}
+
+/*********Contact**********/
+
+#contact ul {
+  margin-top: 60px;
+  @extend .text-center;
+  li {
+    font-size: 2.8rem;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-right: 20px;
+    @extend .text-center;
+    vertical-align: top;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .github, .twitter {
+    font-size: 3.2rem;
+  }
+  .github i {
+    margin-left: 2px;
+  }
+  a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: $keyColor;
+    &:hover {
+      background-color: darken($keyColor, 10%);
+    }
+  }
+}
+
+  /*******フッター*******/
+  footer {
+  background-color: $subColor;
+  padding: 10px 0;
+  @extend .text-center;
+  color: #FFF;
+  }
