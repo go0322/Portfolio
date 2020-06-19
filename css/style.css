@@ -198,13 +198,7 @@ section h2 {
 #works .works-box .works-box-inner div h3 {
   font-size: 1.6rem;
   font-weight: bold;
-  margin: 0 0 5px;
-}
-
-#works .works-box .works-box-inner div small {
-  font-size: 1rem;
-  display: block;
-  margin-bottom: 15px;
+  margin: 0 0 15px;
 }
 
 #works .works-box .works-box-inner div a {
