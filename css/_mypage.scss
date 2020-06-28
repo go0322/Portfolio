@@ -1,0 +1,161 @@
+@import "variables";
+@mixin fontsize($size: 16) {
+  font-size: $size + px;
+  font-size: ($size / 10) * 1rem;
+}
+
+/*********headerコンテンツ**********/
+
+header {
+  #profile {
+    h2 {
+      font-size: 3.2rem;
+      margin-top: 20px;
+    }
+  }
+}
+
+/*********mainコンテンツ vision**********/
+
+#vision {
+  background-color: $subColor;
+  h2 {
+    margin-bottom: 60px;
+    color: $baseColor;
+  }
+  .container {
+    .vision-box {
+      box-sizing: border-box;
+      margin: 10px auto;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #fdfcf6;
+      .vision-text {
+        font-weight: bold;
+        color: $fontColor;
+        li {
+          @include fontsize(14);
+          margin-bottom: 20px;
+          i {
+            color: $keyColor;
+            margin-right: 5px;
+          }
+          &:last-child {
+            margin-bottom: 0;
+            i {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*********mainコンテンツ skill2**********/
+
+#skills2 {
+  background-color: $baseColor;
+  h2 {
+    margin-bottom: 60px;
+    color: $fontColor;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .skill-box {
+      box-sizing: border-box;
+      flex-basis: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #fdfcf6;
+      i {
+        @include fontsize(60);
+        color: $keyColor;
+        margin-bottom: 10px;
+      }
+      h3 {
+        @extend .abel;
+        @include fontsize(20);
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: $fontColor;
+        word-wrap: break-word;
+      }
+    }
+  }
+}
+
+/*********mainコンテンツ page_back**********/
+
+#page_back {
+  margin-left: 16px;
+  a {
+    display: inline-block;
+    @include fontsize(16);
+    color: $fontColor;
+    border-bottom: 1px dashed $fontColor;
+    font-weight: bold;
+    margin-bottom: 60px;
+  }
+}
+
+//PC
+
+@media #{$large} {
+  /*********header**********/
+  header {
+    #profile {
+      h2 {
+      }
+    }
+  }
+
+  /*********#vision***********/
+
+  #vision {
+    .container {
+      .vision-box {
+        padding: 30px 20px;
+        margin: 0 1vw;
+        .vision-text {
+          li {
+            @include fontsize(20);
+          }
+        }
+      }
+    }
+  }
+
+  /**********#skill2**********/
+
+  #skills2 {
+    .container {
+      .skill-box {
+        margin: 20px 10px;
+        flex-basis: 30%;
+        .skill_right {
+          p {
+            text-align: justify;
+            padding: 0 5%;
+          }
+        }
+      }
+    }
+  }
+
+  /**********#page_back**********/
+
+  #page_back {
+    margin-left: 6vw;
+    margin-top: -20px;
+    a {
+      &:hover {
+        color: $keyColor;
+        border-color: $keyColor;
+      }
+    }
+  }
+}

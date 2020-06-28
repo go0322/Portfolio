@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- head要素エリア -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>THIS SITE | KURATA GO PORTFOLIO</title>
+    <meta name="description" content="倉田 剛のポートフォリオサイトです。" />
+    <meta
+      name="keywords"
+      content="Web, デザイン, デザイナー, ポートフォリオ, Web制作"
+    />
+    <meta property="og:title" content="KURATA GO ポートフォリオサイト" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://go0322.github.io/Portfolio/mypage.html"
+    />
+    <meta
+      property="og:image"
+      content="https://go0322.github.io/Portfolio/images/portfolio_image.png"
+    />
+    <meta property="og:site_name" content="KURATA GO ポートフォリオサイト" />
+    <meta
+      property="og:description"
+      content="Kurata Goのポートフォリオサイトです。"
+    />
+
+    <!-- ※Twitter共通設定 -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@gottsuanweb" />
+    <meta name="twitter:player" content="@gottsuanweb" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+    />
+    <link href="css/photoswipe/photoswipe.css" media="all" rel="stylesheet" />
+    <link
+      href="css/photoswipe/default-skin/default-skin.css"
+      media="all"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel=”canonical” href=”https://go0322.github.io/Portfolio/”>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- body要素エリア -->
+    <header>
+      <!-- プロフィールの内容が入るところです -->
+      <div id="navi">
+        <ul>
+          <li class="abel uppercase"><a href="index.html">home</a></li>
+          <li class="abel uppercase">
+            <a href="mypage.html">profile</a>
+          </li>
+          <li class="abel uppercase"><a href="index.html#skills">skills</a></li>
+          <li class="abel uppercase"><a href="works.html">works</a></li>
+          <li class="abel uppercase"><a href="#">this site</a></li>
+          <li class="abel uppercase">
+            <a href="index.html#contact">contact</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section id="site_desc">
+        <div class="container">
+          <h2 class="text-center">This site</h2>
+          <div class="desc_box">
+            <dl>
+              <dt class="text-center">担当範囲</dt>
+              <dd>Design / Coding(Responsive)</dd>
+            </dl>
+            <dl>
+              <dt class="text-center">製作期間</dt>
+              <dd>約1週間(約25時間)</dd>
+            </dl>
+            <dl>
+              <dt class="text-center">ポイント</dt>
+              <dd>
+                サブカラー、アクセントカラーともに、暖かな気候や晴れた日が好きな自分を表現する暖色を使用しました。<br />一方で赤系色を使いつつも落ち着いた印象、誠実さを表現し、かつ派手すぎない見やすいサイトにしたいと考え、暗めのトーンを採用した点がポイントです。
+              </dd>
+            </dl>
+            <dl>
+              <dt class="text-center">参考</dt>
+              <dd>
+                <a
+                  href="https://webdesigner-go.com/template/portfolio-02/"
+                  target="_blank"
+                  >ポートフォリオHTMLテンプレート（ベーシック）|未経験からWebデザイナーへ！【2020年版】</a
+                >
+              </dd>
+            </dl>
+            <dl>
+              <dt class="text-center">Overview</dt>
+              <dd class="overview_inner">
+                <img
+                  src="images/overview_sp.png"
+                  alt="ポートフォリオサイトの概観(SP画面)"
+                  class="overview_sp"
+                />
+                <img
+                  src="images/overview.png"
+                  alt="ポートフォリオサイトの概観(PC画面)"
+                  class="overview_pc"
+                />
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <div id="page_back">
+        <a href="index.html">TOPページへ戻る</a>
+      </div>
+
+      <div id="page_top">
+        <a href="header"><img src="images/pagetop.png" alt="PAGE TOP" /></a>
+      </div>
+    </main>
+    <footer class="text-center">
+      <!-- コピーライトが入るところです -->
+      <small class="abel uppercase"
+        >&copy; Go Kurata, All Rights Reserved.</small
+      >
+    </footer>
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <!-- Background of PhotoSwipe.
+           It's a separate element as animating opacity is faster than rgba(). -->
+      <div class="pswp__bg"></div>
+
+      <!-- Slides wrapper with overflow:hidden. -->
+      <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides.
+              PhotoSwipe keeps only 3 of them in the DOM to save memory.
+              Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <!--  Controls are self-explanatory. Order can be changed. -->
+
+            <div class="pswp__counter"></div>
+
+            <button
+              class="pswp__button pswp__button--close"
+              title="Close (Esc)"
+            ></button>
+
+            <button
+              class="pswp__button pswp__button--fs"
+              title="Toggle fullscreen"
+            ></button>
+
+            <button
+              class="pswp__button pswp__button--zoom"
+              title="Zoom in/out"
+            ></button>
+
+            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+            <!-- element will get class pswp__preloader--active when preloader is running -->
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+          >
+            <div class="pswp__share-tooltip"></div>
+          </div>
+
+          <button
+            class="pswp__button pswp__button--arrow--left"
+            title="Previous (arrow left)"
+          ></button>
+
+          <button
+            class="pswp__button pswp__button--arrow--right"
+            title="Next (arrow right)"
+          ></button>
+
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="js/photoswipe/photoswipe.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/photoswipe/photoswipe-ui-default.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/photoswipe/photoswipe-setup.js"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

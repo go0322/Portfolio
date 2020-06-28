@@ -1,0 +1,63 @@
+@import "variables";
+@mixin fontsize($size: 16) {
+  font-size: $size + px;
+  font-size: ($size / 10) * 1rem;
+}
+
+/*********mainコンテンツ works**********/
+
+#works, #works2{
+  .works_title{
+    padding-top: 60px;
+  }
+  h3 {
+    font-weight: bold;
+    @include fontsize(18);
+    margin-bottom: 60px;
+    color: $subColor;
+  }
+  .my-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    figure{
+      width: 100%;
+      margin-bottom: 10px;
+      border: 3px solid $keyColor;
+      a{
+        display: inline-block;
+        height: 100%;
+        img{
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      figcaption{
+        font-weight: bold;
+        display: none;
+      }
+    }
+  }
+}
+#works2{
+  padding-top: 0;
+}
+
+//PC
+
+@media #{$large} {
+  #works, #works2{
+    .works_title{
+      padding-top: 15px;
+    }
+    h3{
+      @include fontsize(24);
+    }
+    .my-gallery{
+      figure{
+        width: calc(100% / 3 - 40px);
+        margin: 0 20px 20px;
+      }
+    }
+  }
+}
